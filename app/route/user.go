@@ -1,7 +1,7 @@
 package route
 
 import (
-	"github.com/DSMdongly/glove/app/handler"
+	"glove/app/handler"
 
 	"github.com/labstack/echo"
 )

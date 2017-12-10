@@ -3,13 +3,14 @@ package handler
 import (
 	"net/http"
 
-	"github.com/DSMdongly/glove/app/model"
+	"glove/app/model"
 
 	"github.com/labstack/echo"
 )
 
 func Register(ctx echo.Context) error {
 	usr := model.User{}
+	db := model.DB
 
 	if err := ctx.Bind(&usr); err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, "binding error")
@@ -19,8 +20,8 @@ func Register(ctx echo.Context) error {
 		return echo.NewHTTPError(http.StatusBadRequest, "validate error")
 	}
 
-	if err := usr.Create(); err != nil {
-		return echo.NewHTTPError(http.StatusInternalServerError, "failed create note")
+	if err := db.Create(&usr).Error; err != nil {
+		return echo.NewHTTPError(http.StatusConflict, "failed create user")
 	}
 
 	return ctx.NoContent(http.StatusCreated)
@@ -28,6 +29,7 @@ func Register(ctx echo.Context) error {
 
 func Login(ctx echo.Context) error {
 	usr := model.User{}
+	db := model.DB
 
 	err := ctx.Bind(&usr)
 
@@ -35,15 +37,11 @@ func Login(ctx echo.Context) error {
 		return echo.NewHTTPError(http.StatusBadRequest, "binding error")
 	}
 
-	usr, err = model.User{}.FindByIDAndPW(usr.ID, usr.PW)
+	err = db.Where("id = ? AND pw = ?", usr.ID, usr.PW).First(&usr).Error
 
 	if err != nil {
 		return echo.NewHTTPError(http.StatusUnauthorized, "failed find user")
 	}
 
-	tok, _ := usr.Tokenize()
-
-	return ctx.JSON(http.StatusOK, echo.Map{
-		"token": tok,
-	})
+	return ctx.JSON(http.StatusOK, usr)
 }
