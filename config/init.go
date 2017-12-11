@@ -1,9 +1,11 @@
 package config
 
+import "fmt"
+
 var (
-	HTTP   map[string]string
-	JWT    map[string]string
-	Sqlite map[string]string
+	HTTP     map[string]string
+	JWT      map[string]string
+	Postgres map[string]string
 )
 
 func Init() {
@@ -13,6 +15,10 @@ func Init() {
 	JWT = make(map[string]string)
 	JWT["SECRET"] = "JWTSECRETKEY"
 
-	Sqlite = make(map[string]string)
-	Sqlite["PATH"] = "glove.db"
+	Postgres = make(map[string]string)
+	Postgres["HOST"] = "localhost"
+	Postgres["USER"] = "root"
+	Postgres["PASSWORD"] = "ehdgus0608"
+	Postgres["DB"] = "glove"
+	Postgres["PATH"] = fmt.Sprintf("host=%s user=%s dbname=%s sslmode=disable password=%s", Postgres["HOST"], Postgres["USER"], Postgres["DB"], Postgres["PASSWORD"])
 }

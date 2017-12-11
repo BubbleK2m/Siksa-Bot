@@ -4,13 +4,13 @@ import (
 	"github.com/DSMdongly/glove/config"
 
 	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/sqlite"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
 )
 
 var DB *gorm.DB
 
 func Init() (err error) {
-	DB, err = gorm.Open("sqlite3", config.Sqlite["PATH"])
+	DB, err = gorm.Open("postgres", config.Postgres["PATH"])
 
 	if err != nil {
 		return

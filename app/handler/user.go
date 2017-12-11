@@ -21,7 +21,7 @@ func Register(ctx echo.Context) error {
 	}
 
 	if err := db.Create(&usr).Error; err != nil {
-		return echo.NewHTTPError(http.StatusConflict, "failed create user")
+		return echo.NewHTTPError(http.StatusConflict, "account already exist")
 	}
 
 	return ctx.NoContent(http.StatusCreated)
@@ -43,5 +43,9 @@ func Login(ctx echo.Context) error {
 		return echo.NewHTTPError(http.StatusUnauthorized, "failed find user")
 	}
 
-	return ctx.JSON(http.StatusOK, usr)
+	tok, _ := usr.Tokenize()
+
+	return ctx.JSON(http.StatusOK, echo.Map{
+		"token": tok,
+	})
 }
