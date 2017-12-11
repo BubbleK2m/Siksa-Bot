@@ -3,10 +3,10 @@ package main
 import (
 	"log"
 
-	"glove/app"
-	"glove/app/model"
-	"glove/app/route"
-	"glove/config"
+	"github.com/DSMdongly/glove/app"
+	"github.com/DSMdongly/glove/app/model"
+	"github.com/DSMdongly/glove/app/route"
+	"github.com/DSMdongly/glove/config"
 )
 
 func main() {

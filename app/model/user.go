@@ -3,7 +3,7 @@ package model
 import (
 	"encoding/base64"
 
-	"glove/config"
+	"github.com/DSMdongly/glove/config"
 
 	jwt "github.com/dgrijalva/jwt-go"
 )

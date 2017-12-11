@@ -3,7 +3,7 @@ package handler
 import (
 	"net/http"
 
-	"glove/app/model"
+	"github.com/DSMdongly/glove/app/model"
 
 	"github.com/labstack/echo"
 )

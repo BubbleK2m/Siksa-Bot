@@ -3,8 +3,8 @@ package app
 import (
 	"fmt"
 
-	"glove/config"
-	"glove/support"
+	"github.com/DSMdongly/glove/config"
+	"github.com/DSMdongly/glove/support"
 
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
@@ -15,6 +15,9 @@ var Echo *echo.Echo
 func Init() {
 	Echo = echo.New()
 	Echo.Validator = support.NewValidator()
+	Echo.Renderer = support.NewRenderer()
+
+	Echo.Static("/static", "app/static")
 
 	Echo.Use(middleware.Recover())
 	Echo.Use(middleware.RequestID())

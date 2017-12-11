@@ -1,6 +1,6 @@
 package route
 
-import "glove/app"
+import "github.com/DSMdongly/glove/app"
 
 func Init() {
 	User(app.Echo)

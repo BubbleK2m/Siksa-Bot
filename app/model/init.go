@@ -1,7 +1,7 @@
 package model
 
 import (
-	"glove/config"
+	"github.com/DSMdongly/glove/config"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
