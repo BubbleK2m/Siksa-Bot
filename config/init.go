@@ -10,15 +10,15 @@ var (
 
 func Init() {
 	HTTP = make(map[string]string)
-	HTTP["PORT"] = "8000"
+	HTTP["PORT"] = "your http ports"
 
 	JWT = make(map[string]string)
-	JWT["SECRET"] = "8FC536E4DE2ABADF47558D9F2C2E4"
+	JWT["SECRET"] = "your jwt keys"
 
 	Postgres = make(map[string]string)
-	Postgres["HOST"] = "localhost"
-	Postgres["USER"] = "root"
-	Postgres["PASSWORD"] = "ehdgus0608"
-	Postgres["DB"] = "glove"
+	Postgres["HOST"] = "your postgres host"
+	Postgres["USER"] = "your postgres user name"
+	Postgres["PASSWORD"] = "your postgres user password"
+	Postgres["DB"] = "your postgres db name"
 	Postgres["PATH"] = fmt.Sprintf("host=%s user=%s dbname=%s sslmode=disable password=%s", Postgres["HOST"], Postgres["USER"], Postgres["DB"], Postgres["PASSWORD"])
 }
