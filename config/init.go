@@ -10,10 +10,10 @@ var (
 
 func Init() {
 	HTTP = make(map[string]string)
-	HTTP["PORT"] = "5000"
+	HTTP["PORT"] = "8000"
 
 	JWT = make(map[string]string)
-	JWT["SECRET"] = "JWTSECRETKEY"
+	JWT["SECRET"] = "8FC536E4DE2ABADF47558D9F2C2E4"
 
 	Postgres = make(map[string]string)
 	Postgres["HOST"] = "localhost"
