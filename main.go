@@ -4,7 +4,6 @@ import (
 	"log"
 
 	"github.com/DSMdongly/siksa-bot/app"
-	"github.com/DSMdongly/siksa-bot/app/bot"
 	"github.com/DSMdongly/siksa-bot/app/model"
 	"github.com/DSMdongly/siksa-bot/app/route"
 	"github.com/DSMdongly/siksa-bot/config"
