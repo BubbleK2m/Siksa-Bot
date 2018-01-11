@@ -48,7 +48,7 @@ func Start() {
 				log.Println("Sent Alarm ", alm.Note)
 			}
 
-			time.Sleep(100 * time.Millisecond)
+			time.Sleep(500 * time.Millisecond)
 		}
 	}()
 }
