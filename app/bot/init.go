@@ -31,11 +31,11 @@ func Start() {
 			alms := []model.Alarm{}
 			
 			now := time.Now()
-			now = time.Date(2000, 6, 8, now.Hour(), now.Minute(), now.Second(), 3, now.Location())
+			now = time.Date(2000, 6, 8, now.Hour(), now.Minute(), now.Second(), 3, time.UTC)
 
-			log.Println("Track ", now)
+			log.Println("Track ", now.Format(time.RFC3339))
 
-			if err := db.Where("time = ?", now).Find(&alms).Error; err != nil {
+			if err := db.Where("time = ?", now.Format(time.RFC3339)).Find(&alms).Error; err != nil {
 				break
 			}
 	

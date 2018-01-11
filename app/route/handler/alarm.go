@@ -25,7 +25,7 @@ func CreateAlarm() echo.HandlerFunc {
 			alm.Time, _ = support.ParseTime(tme)
 		}
 
-		alm.Time = time.Date(2000, 6, 8, alm.Time.Hour(), alm.Time.Minute(), alm.Time.Second(), 3, alm.Time.Location())
+		alm.Time = time.Date(2000, 6, 8, alm.Time.Hour(), alm.Time.Minute(), alm.Time.Second(), 3, time.UTC)
 
 		if err := ctx.Validate(&alm); err != nil {
 			return echo.NewHTTPError(http.StatusBadRequest, "validation error")
