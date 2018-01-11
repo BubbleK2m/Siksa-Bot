@@ -31,9 +31,7 @@ func Start() {
 			alms := []model.Alarm{}
 			
 			now := time.Now()
-			loc, _ := time.LoadLocation("Asia/Seoul")
-
-			now = time.Date(2000, 6, 8, now.Hour(), now.Minute(), now.Second(), 0, loc)
+			now = time.Date(2000, 6, 8, now.Hour(), now.Minute(), now.Second(), 0, time.UTC)
 
 			log.Println("Track ", now.Format(time.RFC3339))
 
