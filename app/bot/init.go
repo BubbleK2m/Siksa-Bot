@@ -31,7 +31,7 @@ func Start() {
 			alms := []model.Alarm{}
 			
 			now := time.Now()
-			now = time.Date(2000, 6, 8, 1, 40, 0, 0, time.UTC)
+			now = time.Date(2000, 6, 8, 1, 40, 3, 0, now.Location())
 
 			log.Println("Track ", now)
 
