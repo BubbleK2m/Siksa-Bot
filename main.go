@@ -3,11 +3,11 @@ package main
 import (
 	"log"
 
-	"github.com/DSMdongly/glove/app"
-	"github.com/DSMdongly/glove/app/doc"
-	"github.com/DSMdongly/glove/app/model"
-	"github.com/DSMdongly/glove/app/route"
-	"github.com/DSMdongly/glove/config"
+	"github.com/DSMdongly/siksa-bot/app"
+	"github.com/DSMdongly/siksa-bot/app/bot"
+	"github.com/DSMdongly/siksa-bot/app/model"
+	"github.com/DSMdongly/siksa-bot/app/route"
+	"github.com/DSMdongly/siksa-bot/config"
 )
 
 func main() {
@@ -18,8 +18,10 @@ func main() {
 		log.Fatal(err)
 	}
 
-	doc.Init()
-	route.Init()
+    route.Init()
+	
+	bot.Init()
+	bot.Start()
 
 	app.Start()
 }

@@ -3,6 +3,30 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "cRk0cd0hBBP+vTV9eMoQXIYxQFw=",
+			"path": "github.com/cenkalti/backoff",
+			"revision": "2ea60e5f094469f9e65adb9cd103795b73ae743e",
+			"revisionTime": "2017-12-24T16:42:12Z"
+		},
+		{
+			"checksumSHA1": "6j/oafjvar8uGgvwtnaJ6WtZJxs=",
+			"path": "github.com/dghubble/go-twitter/twitter",
+			"revision": "c4115fa44a928413e0b857e0eb47376ffde3a61a",
+			"revisionTime": "2017-09-10T03:52:29Z"
+		},
+		{
+			"checksumSHA1": "tTd3G1B4IXUKvtqrf5X5pjZalBU=",
+			"path": "github.com/dghubble/oauth1",
+			"revision": "7d51c10e15ca32917b32ce43f6e25840d6951db4",
+			"revisionTime": "2017-05-16T17:24:31Z"
+		},
+		{
+			"checksumSHA1": "M9P16C5qZmH/AAir+h3mu/Lu29E=",
+			"path": "github.com/dghubble/sling",
+			"revision": "80ec33c6152a53edb5545864ca37567b506c4ca5",
+			"revisionTime": "2017-06-29T03:54:44Z"
+		},
+		{
 			"checksumSHA1": "0sh4FXicINLD/q5WM0qnXLan21g=",
 			"path": "github.com/dgrijalva/jwt-go",
 			"revision": "dbeaa9332f19a944acb5736b4456cfcc02140e29",
@@ -27,6 +51,12 @@
 			"revisionTime": "2017-03-27T19:17:03Z"
 		},
 		{
+			"checksumSHA1": "ZXja1pB/YvDYcNpkp7AtOm1mhgk=",
+			"path": "github.com/google/go-querystring/query",
+			"revision": "53e6ce116135b80d037921a7fdd5138cf32d7a8a",
+			"revisionTime": "2017-01-11T10:11:55Z"
+		},
+		{
 			"checksumSHA1": "nJelTPrSAq46MKY83F/gpIVLOpw=",
 			"path": "github.com/jinzhu/gorm",
 			"revision": "0a51f6cdc55d1650d9ed3b4c13026cfa9133b01e",
@@ -45,16 +75,16 @@
 			"revisionTime": "2017-01-02T12:52:26Z"
 		},
 		{
-			"checksumSHA1": "vBqpQPE4TRArhRyjk2TqqbMJMVQ=",
+			"checksumSHA1": "GtPxhB1c2OWe1pg1FyZWTBX6UNk=",
 			"path": "github.com/labstack/echo",
-			"revision": "0473c51f1dbd83487effce00702571d19033a6e5",
-			"revisionTime": "2017-11-23T01:58:59Z"
+			"revision": "c8bedd1cf928bcd4315f771319d3063746066c11",
+			"revisionTime": "2017-12-29T18:57:59Z"
 		},
 		{
-			"checksumSHA1": "mw9n+ntgxhEqyTKoHhiufIhgHd0=",
+			"checksumSHA1": "3kndREvBCGQ58AHQlJ0rromPADM=",
 			"path": "github.com/labstack/echo/middleware",
-			"revision": "0473c51f1dbd83487effce00702571d19033a6e5",
-			"revisionTime": "2017-11-23T01:58:59Z"
+			"revision": "c8bedd1cf928bcd4315f771319d3063746066c11",
+			"revisionTime": "2017-12-29T18:57:59Z"
 		},
 		{
 			"checksumSHA1": "8ulgQ4ebz69LsRQlpokdyTzByWE=",
@@ -99,16 +129,22 @@
 			"revisionTime": "2017-11-26T05:04:59Z"
 		},
 		{
-			"checksumSHA1": "jZF3vDdwBoCv0hq7vlCmwNLYbCg=",
+			"checksumSHA1": "Ys2X+goLir8gN0XuZTW3qsOy2rs=",
 			"path": "github.com/mattn/go-colorable",
-			"revision": "6fcc0c1fd9b620311d821b106a400b35dc95c497",
-			"revisionTime": "2017-11-11T06:59:53Z"
+			"revision": "586e6dcca296d085100876beb6dbf02287a247f7",
+			"revisionTime": "2017-12-29T09:55:07Z"
 		},
 		{
 			"checksumSHA1": "kum8izZy1+pVfDiApW5hT2HoH1w=",
 			"path": "github.com/mattn/go-isatty",
 			"revision": "6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c",
 			"revisionTime": "2017-11-07T05:05:31Z"
+		},
+		{
+			"checksumSHA1": "Bj0QzneJdkyitup6rUM5061KBuM=",
+			"path": "github.com/subosito/gotenv",
+			"revision": "009e1f9581dc712aba5682a279dee155ca3eeded",
+			"revisionTime": "2017-01-20T14:09:13Z"
 		},
 		{
 			"checksumSHA1": "x6+Vi9WumwYUrK8ZUmkGLDgOLtc=",
@@ -126,21 +162,27 @@
 		{
 			"checksumSHA1": "CSMVjFF7FnylAUUKW1e/4r+VFXA=",
 			"path": "golang.org/x/crypto/acme",
-			"revision": "94eea52f7b742c7cbe0b03b22f0c4c8631ece122",
-			"revisionTime": "2017-11-28T01:43:40Z"
+			"revision": "b3c9a1d25cfbbbab0ff4780b71c4f54e6e92a0de",
+			"revisionTime": "2018-01-09T18:05:24Z"
 		},
 		{
 			"checksumSHA1": "4JU5m5FGcmRYDq/oPlwQC+K8TYA=",
 			"path": "golang.org/x/crypto/acme/autocert",
-			"revision": "94eea52f7b742c7cbe0b03b22f0c4c8631ece122",
-			"revisionTime": "2017-11-28T01:43:40Z"
+			"revision": "b3c9a1d25cfbbbab0ff4780b71c4f54e6e92a0de",
+			"revisionTime": "2018-01-09T18:05:24Z"
 		},
 		{
-			"checksumSHA1": "LmxFNDqBOUH+3UYYF53ovhuMg4c=",
+			"checksumSHA1": "GtamqiJoL7PGHsN454AoffBFMa8=",
+			"path": "golang.org/x/net/context",
+			"revision": "ab555f366c4508dbe0802550b1b20c46c5c18aa0",
+			"revisionTime": "2018-01-10T21:41:16Z"
+		},
+		{
+			"checksumSHA1": "Fg1fx71YHUWg1IJqUAESfnvv5Wg=",
 			"path": "gopkg.in/go-playground/validator.v9",
-			"revision": "61caf9d3038e1af346dbf5c2e16f6678e1548364",
-			"revisionTime": "2017-11-13T04:58:10Z"
+			"revision": "230db62e071d40171640c9deb875d46a3858d9dd",
+			"revisionTime": "2018-01-06T03:46:09Z"
 		}
 	],
-	"rootPath": "github.com/DSMdongly/glove"
+	"rootPath": "github.com/DSMdongly/siksa-bot"
 }

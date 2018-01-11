@@ -1,8 +1,8 @@
 package route
 
-import "github.com/DSMdongly/glove/app"
+import "github.com/DSMdongly/siksa-bot/app"
 
 func Init() {
 	User(app.Echo)
-	Doc(app.Echo)
+	Alarm(app.Echo)
 }

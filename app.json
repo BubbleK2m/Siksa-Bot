@@ -1,0 +1,6 @@
+{
+    "name": "Siksa Bot Web Server",
+    "description": "Siksa Twitter Bot Web Server",
+    "repository": "https://github.com/DSMdongly/siksa-bot",
+    "keywords": ["go", "siksa bot", "meal alarm", "twitter bot"]
+}
