@@ -19,8 +19,8 @@ func main() {
 
     route.Init()
 	
-	/* bot.Init()
-	bot.Start() */
+	bot.Init()
+	bot.Start()
 
 	app.Start()
 }
