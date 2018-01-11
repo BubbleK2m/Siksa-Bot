@@ -33,9 +33,9 @@ func Start() {
 			now := time.Now()
 			now = time.Date(2000, 6, 8, 1, 40, 0, 0, time.UTC)
 
-			log.Println("Track ", now.Format(time.RFC3339))
+			log.Println("Track ", now)
 
-			if err := db.Where("time = ?", now.Format(time.RFC3339)).Find(&alms).Error; err != nil {
+			if err := db.Where("time = ?", now).Find(&alms).Error; err != nil {
 				break
 			}
 	
