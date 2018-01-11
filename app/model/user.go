@@ -9,8 +9,8 @@ import (
 )
 
 type User struct {
-	ID string `json:"id" form:"id" validate:"required" gorm:"primary_key"`
-	PW string `json:"pw" form:"pw" validate:"required" gorm:"not_null"`
+	ID string `form:"id" validate:"required" gorm:"primary_key"`
+	PW string `form:"pw" validate:"required" gorm:"not_null"`
 }
 
 func (usr User) Tokenize() (string, error) {

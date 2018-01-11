@@ -9,6 +9,6 @@ import (
 type Alarm struct {
 	gorm.Model
 
-	Note string    `json:"note" validate:"required" gorm:"not_null" form:"note"`
-	Time time.Time `json:"time" validate:"required" gorm:"not_null;unique_index"`
+	Note string    `validate:"required" gorm:"not_null" form:"note"`
+	Time time.Time `validate:"required" gorm:"not_null;unique_index"`
 }
