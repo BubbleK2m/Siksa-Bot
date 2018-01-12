@@ -2,8 +2,9 @@ package app
 
 import (
 	"fmt"
+	"net/http"
 	"time"
-	
+
 	"github.com/DSMdongly/siksa-bot/config"
 	"github.com/DSMdongly/siksa-bot/support"
 
@@ -27,14 +28,14 @@ func Init() {
 }
 
 func Awake(tik time.Duration) {
-	go func() {
+	go func(){
 		time.Sleep(time.Minute * 1)
 		
 		for {
 			http.Get("https://siksa-bot.herokuapp.com/")
 			time.Sleep(tik)
 		}
-	}
+	}()
 }
 
 func Start() {
