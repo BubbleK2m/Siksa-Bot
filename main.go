@@ -24,6 +24,6 @@ func main() {
 	bot.Init()
 	bot.Start()
 
-	app.Awake()
+	app.Awake(time.Minute * 3)
 	app.Start()
 }
