@@ -11,13 +11,6 @@ import (
 	"github.com/DSMdongly/siksa-bot/config"
 )
 
-func Awake(tik time.Duration) {
-	for {
-		http.Get("https://siksa-bot.herokuapp.com/")
-		time.Sleep(tik)
-	}
-}
-
 func main() {
 	config.Init()
 	app.Init()
@@ -31,6 +24,6 @@ func main() {
 	bot.Init()
 	bot.Start()
 
-	go app.Start()
-	go Awake(time.Minute * 3)
+	app.Awake()
+	app.Start()
 }

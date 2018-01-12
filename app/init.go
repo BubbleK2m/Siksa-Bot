@@ -25,6 +25,17 @@ func Init() {
 	Echo.Use(middleware.CORS())
 }
 
+func Awake(tik time.Duration) {
+	go func() {
+		time.Sleep(time.Minute * 1)
+		
+		for {
+			http.Get("https://siksa-bot.herokuapp.com/")
+			time.Sleep(tik)
+		}
+	}
+}
+
 func Start() {
 	Echo.Logger.Fatal(Echo.Start(fmt.Sprintf(":%s", config.HTTP["PORT"])))
 }
